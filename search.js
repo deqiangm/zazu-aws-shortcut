@@ -21,10 +21,10 @@ module.exports = (pluginContext) => {
     }
     
     return new Promise((resolve, reject) => {
-      url = 'https://us-west-2.console.aws.amazon.com/${service}/home?region=us-west-2#'
+      var url = 'https://us-west-2.console.aws.amazon.com/${service}/home?region=us-west-2#'
       if (account) {
-        account_name = variables[account]
-        orig = encodeURI(url)
+        var account_name = variables[account]
+        var orig = encodeURI(url)
         url = 'https://access.amazon.com/aws/accounts/fetchConsoleUrl?account_name=${account_name}&destination=${orig}'
       }
       resolve(url)
