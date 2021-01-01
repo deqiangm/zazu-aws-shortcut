@@ -12,7 +12,7 @@ module.exports = (pluginContext) => {
     const variables = env || {}
     const configFile = variables['file']
     const args = query.split(' ', 2)
-    var account = none, service = none
+    var account = null, service = null
     if (args.length == 1) {
       service = args[0]
     } else {
