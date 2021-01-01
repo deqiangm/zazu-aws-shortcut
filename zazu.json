@@ -1,0 +1,28 @@
+{
+  "name": "AWS Shortcut",
+  "version": "1.0.0",
+  "description": "AWS Shortcut",
+  "icon": "assets/chrome.png",
+  "blocks": {
+    "input": [
+      {
+        "id": "AWS Shortcut",
+        "type": "PrefixScript",
+        "space": true,
+        "args": "Required",
+        "prefix": "aws",
+        "script": "search.js",
+        "connections": [
+          "Open"
+        ]
+      }
+    ],
+    "output": [
+      {
+        "id": "Open",
+        "type": "OpenInBrowser",
+        "url": "{value}"
+      }
+    ]
+  }
+}
